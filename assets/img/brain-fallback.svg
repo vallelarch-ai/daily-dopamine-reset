@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" role="img" aria-label="Stilisierte Gehirn-Illustration">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="48%" r="55%">
+      <stop offset="0%" stop-color="#34E0E8" stop-opacity="0.35"/>
+      <stop offset="45%" stop-color="#3B82F6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5FE9F0"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="160" cy="158" r="150" fill="url(#halo)"/>
+
+  <g fill="none" stroke="url(#stroke)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" opacity="0.95">
+    <!-- Gehirn-Silhouette -->
+    <path d="M160 60
+             C120 50, 78 70, 70 110
+             C46 118, 44 152, 66 166
+             C54 188, 70 214, 98 214
+             C108 240, 150 246, 160 224
+             C170 246, 212 240, 222 214
+             C250 214, 266 188, 254 166
+             C276 152, 274 118, 250 110
+             C242 70, 200 50, 160 60 Z"/>
+    <!-- Mittelspalt -->
+    <path d="M160 64 L160 230" opacity="0.6"/>
+    <!-- linke Faltungen -->
+    <path d="M150 86 C120 92, 116 116, 138 124" opacity="0.85"/>
+    <path d="M132 130 C104 136, 102 160, 126 168" opacity="0.85"/>
+    <path d="M126 176 C104 184, 110 208, 138 206" opacity="0.85"/>
+    <path d="M150 150 C128 154, 128 176, 150 180" opacity="0.7"/>
+    <!-- rechte Faltungen -->
+    <path d="M170 86 C200 92, 204 116, 182 124" opacity="0.85"/>
+    <path d="M188 130 C216 136, 218 160, 194 168" opacity="0.85"/>
+    <path d="M194 176 C216 184, 210 208, 182 206" opacity="0.85"/>
+    <path d="M170 150 C192 154, 192 176, 170 180" opacity="0.7"/>
+  </g>
+
+  <!-- Synapsen-Punkte -->
+  <g fill="#5FE9F0" filter="url(#glow)">
+    <circle cx="138" cy="124" r="3"/>
+    <circle cx="126" cy="168" r="2.6"/>
+    <circle cx="138" cy="206" r="3"/>
+    <circle cx="182" cy="124" r="3"/>
+    <circle cx="194" cy="168" r="2.6"/>
+    <circle cx="182" cy="206" r="3"/>
+    <circle cx="160" cy="148" r="2.4" fill="#3B82F6"/>
+    <circle cx="160" cy="194" r="2.4" fill="#3B82F6"/>
+  </g>
+</svg>
